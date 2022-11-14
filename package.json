@@ -3,7 +3,7 @@
   "displayName": "gitplay",
   "description": "A suite of tool to use git as a timeline",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "publisher": "y-nk",
   "galleryBanner": {
     "color": "#e3f4ff",
