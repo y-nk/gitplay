@@ -1,0 +1,92 @@
+{
+  "name": "gitplay",
+  "displayName": "gitplay",
+  "description": "A suite of tool to use git as a timeline",
+  "license": "MIT",
+  "version": "0.0.1",
+  "publisher": "y-nk",
+  "galleryBanner": {
+    "color": "#e3f4ff",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:gitplay.rewind",
+    "onCommand:gitplay.prev",
+    "onCommand:gitplay.next"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "gitplay.rewind",
+        "title": "Git Play: Go to first commit"
+      },
+      {
+        "command": "gitplay.prev",
+        "title": "Git Play: Go to previous commit"
+      },
+      {
+        "command": "gitplay.next",
+        "title": "Git Play: Go to next commit"
+      }
+    ]
+  },
+  "keybindings": [
+    {
+      "command": "gitplay.rewind",
+      "key": "ctrl+h ctrl+h",
+      "mac": "cmd+h cmd+h",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "gitplay.prev",
+      "key": "ctrl+j ctrl+j",
+      "mac": "cmd+j cmd+j",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "gitplay.next",
+      "key": "ctrl+k ctrl+k",
+      "mac": "cmd+k cmd+k",
+      "when": "editorTextFocus"
+    }
+  ],
+  "main": "./dist/index.js",
+  "icon": "icon.png",
+  "files": [
+    "dist"
+  ],
+  "browser": "./dist/index.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/y-nk/gitplay.git"
+  },
+  "scripts": {
+    "start": "tsc -watch -p ./",
+    "build": "tsc -p ./",
+    "lint": "eslint src --ext ts --fix",
+    "pack": "vsce package --no-dependencies",
+    "pub": "vsce publish --no-dependencies",
+    "postversion": "yarn pub"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "typescript": "^4.8.4",
+    "vsce": "^2.14.0"
+  }
+}
