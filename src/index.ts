@@ -10,7 +10,6 @@ import { getCurrentState } from "./getCurrentState";
 import { ProgressToast } from './ProgressToast';
 
 let toast: ProgressToast;
-
 // toastProgress(`#${newSha}: ${message}`, percent);
 
 export async function activate(_: ExtensionContext) {
@@ -69,7 +68,7 @@ export async function activate(_: ExtensionContext) {
   registerWatcher(_, async ({ $, currentSha }) => {
     const { message, percent } = await getCurrentState({ $, currentSha });
     toast.show(message, percent);
-});
+  });
 }
 
 // This method is called when your extension is deactivated
