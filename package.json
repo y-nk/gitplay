@@ -2,7 +2,7 @@
   "name": "gitplay",
   "displayName": "gitplay",
   "description": "A suite of tool to use git as a timeline",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "publisher": "y-nk",
   "galleryBanner": {
     "color": "#e3f4ff",
