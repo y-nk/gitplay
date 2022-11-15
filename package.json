@@ -19,7 +19,7 @@
     "url": "https://github.com/y-nk/gitplay.git"
   },
   "engines": {
-    "vscode": "^1.57.0"
+    "vscode": "^1.73.0"
   },
   "categories": [
     "Debuggers",
@@ -31,6 +31,7 @@
   ],
   "sideEffects": false,
   "activationEvents": [
+    "onStartupFinished",
     "workspaceContains:.git"
   ],
   "contributes": {
