@@ -17,7 +17,7 @@ export async function activate(_: ExtensionContext) {
   const context = await getContext();
   const state = await getCurrentState(context);
 
-  toast = new ProgressToast('**Git play**', 0);
+  toast = new ProgressToast('Git play', 0);
   toast.show(state.message, state.percent);
 
   registerCommand(_, 'gitplay.rewind', async ({ $, currentSha }) => {
