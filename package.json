@@ -3,7 +3,7 @@
   "displayName": "gitplay",
   "description": "A suite of tool to use git as a timeline",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "y-nk",
   "galleryBanner": {
     "color": "#e3f4ff",
@@ -78,7 +78,7 @@
     "lint": "eslint src --ext ts --fix",
     "pack": "vsce package --no-dependencies",
     "pub": "vsce publish --no-dependencies",
-    "postversion": "yarn pub"
+    "postversion": "yarn pub && git push --tags"
   },
   "devDependencies": {
     "@types/node": "16.x",
