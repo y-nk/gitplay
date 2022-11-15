@@ -34,7 +34,6 @@
     "onCommand:gitplay.rewind",
     "onCommand:gitplay.prev",
     "onCommand:gitplay.next",
-    "onStartupFinished",
     "workspaceContains:.git"
   ],
   "contributes": {
