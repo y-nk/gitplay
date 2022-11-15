@@ -31,6 +31,9 @@
   ],
   "sideEffects": false,
   "activationEvents": [
+    "onCommand:gitplay.rewind",
+    "onCommand:gitplay.prev",
+    "onCommand:gitplay.next",
     "onStartupFinished",
     "workspaceContains:.git"
   ],
