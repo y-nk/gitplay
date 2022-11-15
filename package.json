@@ -70,7 +70,7 @@
     "lint": "eslint src --ext ts --fix",
     "pack": "vsce package --no-dependencies",
     "pub": "vsce publish --no-dependencies",
-    "postversion": "yarn build && yarn pub && git push --tags"
+    "postversion": "yarn build && yarn pub && git push --follow-tags"
   },
   "devDependencies": {
     "@types/node": "16.x",
