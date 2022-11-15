@@ -13,12 +13,12 @@
     "vscode": "^1.73.0"
   },
   "categories": [
-    "Other"
+    "Debuggers",
+    "Education",
+    "SCM Providers"
   ],
   "activationEvents": [
-    "onCommand:gitplay.rewind",
-    "onCommand:gitplay.prev",
-    "onCommand:gitplay.next"
+    "*"
   ],
   "contributes": {
     "commands": [
