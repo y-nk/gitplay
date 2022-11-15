@@ -3,7 +3,7 @@ import { GitPlayContext } from "./getContext";
 export async function getCurrentState({ $, currentSha }: Pick<GitPlayContext, '$' | 'currentSha'>) {
   const [currentBranch] = (await $(`git branch --contains ${currentSha}`))
     .filter(str => !str.includes('HEAD'))
-    .map(str => str.trim());
+    .map(str => str.replace('*', '').trim());
 
   const [lastSha] = await $(`git rev-parse --short ${currentBranch}`);
   const allShas = await $(`git rev-list --topo-order --reverse ${lastSha}`);
